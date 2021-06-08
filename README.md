@@ -28,8 +28,12 @@ This project uses a number of open source framework to work properly:
 ```sh
 cd [project-name]
 composer install
+php artisan migrate
+php artisan db:seed
 php artisan serve
 ```
+
+Make sure to setup database configuration on *.env* file
 
 ## License
 
