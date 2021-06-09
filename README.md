@@ -44,6 +44,22 @@ php artisan db:seed
 php artisan serve
 ```
 
+## Testing
+
+
+#### Game 
+Your development server will run at [localhost:8000](http://localhost:8000) by default
+
+#### Administrative Panel
+For administrative panel, visit [localhost:8000/admin](http://localhost:8000/admin)
+
+username: admin
+password: admin
+
+
+
+
+
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
