@@ -50,4 +50,14 @@ class AdminController extends Controller
                 'message' => "Invalid credentials"
             ], 401);
     }
+
+    public function doLogout() {
+        Auth::logout();
+
+        return response()->json([
+            'status' => true,
+            'data' => null,
+            'message' => "Logged Out"
+        ]);
+    }
 }
