@@ -18,22 +18,31 @@ This project uses a number of open source framework to work properly:
 - [Laravel 8](https://laravel.com/) - The PHP Framework for Web Artisans
 - [Bootstrap CSS](https://getbootstrap.com/) - CSS Framework
 - [jQuery](https://jquery.com/) - Javascript Framework
+- [SweetAlert2](https://sweetalert2.github.io/) - Javascript alert plugins
  
  ## Requirements
  - PHP >= 7.3
  - [Composer](https://getcomposer.org/)
 
 ## Installation
-
 ```sh
-cd [project-name]
+# clone the repository
+git clone https://github.com/abdik84/word-scrambled-game.git
+cd word-scrambled-game
+# install laravel
 composer install
+# setup environment
+cp .env.example .env
+# generate app key
+php artisan key:generate
+# run laravel migration to generate table to database
+# make sure you have setup your database configuration on .env file
 php artisan migrate
+# seed admin to table admin
 php artisan db:seed
+# start development server
 php artisan serve
 ```
-
-Make sure to setup database configuration on *.env* file
 
 ## License
 
