@@ -19,6 +19,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::group(['prefix' => 'games'], function($games) {
     $games->post('/add', "GamesController@store");
+    $games->get('/{player_id}', "GamesController@getGamesByPlayer");
+    $games->get('/detail/{game_id}', "GamesController@getGamesDetail");
 });
 
 Route::post("/login", "AdminController@doLogin");
+Route::post("/logout", "AdminController@dologout");
