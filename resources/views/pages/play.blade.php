@@ -20,7 +20,7 @@
                 <div class="row justify-content-center mt-4" style="padding: 0px 30px;">
                     @for($x = 0; $x < strlen($item['scrambled']); $x++)
                         <div class="col">
-                            <input type="text" class="my-input" id="{{ $index*10+$x }}" maxlength="1">
+                            <input type="text" class="my-input" autocomplete="off" id="{{ $index*10+$x }}" maxlength="1">
                         </div>
                     @endfor
                 </div>
