@@ -47,16 +47,13 @@ php artisan serve
 ## Testing
 
 
-#### Game 
+##### Game 
 Your development server will run at [localhost:8000](http://localhost:8000) by default
 
-#### Administrative Panel
+##### Administrative Panel
 For administrative panel, visit [localhost:8000/admin](http://localhost:8000/admin)
 
-username: admin
-password: admin
-
-
+username: **admin** password: **admin**
 
 
 
