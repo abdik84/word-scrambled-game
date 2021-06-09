@@ -71,4 +71,29 @@ class GamesController extends Controller
             ], 500);
         }
     }
+
+    public function getGamesByPlayer($player_id) {
+        $data = Games::where('player_id', $player_id)
+                    ->withCount(['details as total_score' => function($q) {
+                        $q->select(DB::raw("SUM(score)"));
+                    }])
+                    ->orderBy('created_at', 'asc')
+                    ->get();
+
+        return response()->json([
+            'status' => true,
+            'data' => $data,
+            'message' => null
+        ]);
+    }
+
+    public function getGamesDetail($game_id) {
+        $data = GamesDetail::where("games_id", $game_id)->get();
+
+        return response()->json([
+            'status' => true,
+            'data' => $data,
+            'message' => null
+        ]);
+    }
 }
